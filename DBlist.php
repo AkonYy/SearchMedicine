@@ -129,28 +129,9 @@ function getdistance($lng1,$lat1,$lng2,$lat2){
 	
 	//释放结果
     mysqli_free_result($result);
-   //获取数据总数
-   //$total_sql="select count(*) from(SELECT b.YYXX02,b.YYXI08,b.YYXI04,a.CFMX03,a.CFMX04,a.CFMX05,a.CFMX06,a.CFMX07,a.CFMX08,c.CSMC FROM new_yaopin a,ydxx b,csxx c where (a.CFMX03 like $Search) and (a.YYXX01=b.YYXX01) and (c.CSBH=b.CSBH)) a";
-   //echo $total_sql;
-   //$total_result=mysql_fetch_array(mysql_query($total_sql));
-   //$total=$total_result[0];
-   //计算页数
-   //$total_pages = ceil($total/$pageSize); //向上取整
-   //echo $total_pages;
+   
     // 关闭连接
     mysqli_close($conn);  
 	
-/*	//显示数据+分页条
-	$page_banner = "";
-	$page_banner.="<a href = 'http://192.168.1.104:8880/ajaxdemo/index.html'>&nbsp;搜索页&nbsp;</a>";
-	if($page>1){
-	$page_banner.="<a href='" .$_SERVER['PHP_SELF']. "?p=1&key=" .$key. "'>&nbsp;第一页&nbsp;</a>";
-	$page_banner.="<a href='" .$_SERVER['PHP_SELF']. "?p=" .($page-1)."&key=" .$key. "'>&nbsp;上一页&nbsp;</a>";
-	}
-	if($page<$total_pages){
-	$page_banner.="<a href='" .$_SERVER['PHP_SELF']. "?p=" .($page+1)."&key=" .$key. "'>&nbsp;下一页&nbsp;</a>";
-	$page_banner.="<a href='" .$_SERVER['PHP_SELF']. "?p=" .($total_pages)."&key=" .$key. "'>&nbsp;尾 页&nbsp;</a>";
-	}
-	$page_banner.=" 共($total_pages)页.";
-	echo $page_banner;*/
+
 
